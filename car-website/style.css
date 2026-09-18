@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+
+    /* Gradient background */
+    background: linear-gradient(
+        135deg,
+        #080b16,
+        #11182b,
+        #18213a
+    );
+
+    min-height: 100vh;
+}
+
+
+/* ---------------- NAVBAR ---------------- */
+
+header {
+    padding: 25px 7%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 25px;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #8ea7ff;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #5b70ff,
+        #8b5cf6
+    );
+
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(91, 112, 255, 0.3);
+}
+
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 50px 8%;
+
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.small-text {
+    color: #8ea7ff;
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #8ea7ff;
+}
+
+.description {
+    color: #b8bfd1;
+    line-height: 1.7;
+
+    max-width: 430px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ---------------- BUTTONS ---------------- */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    text-decoration: none;
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #5b70ff,
+        #8b5cf6
+    );
+}
+
+.secondary-btn {
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-3px);
+}
+
+.primary-btn:hover {
+    box-shadow: 0 10px 25px rgba(91, 112, 255, 0.3);
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ---------------- CAR IMAGE ---------------- */
+
+.hero-car {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.hero-car img {
+    width: 100%;
+    max-width: 650px;
+
+    transition: 0.5s;
+}
+
+.hero-car img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ---------------- FEATURES ---------------- */
+
+.features {
+    display: flex;
+    gap: 20px;
+
+    padding: 20px 8% 60px;
+}
+
+.feature-card {
+    flex: 1;
+
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.icon {
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #aeb5c7;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ---------------- FOOTER ---------------- */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #777f94;
+
+    font-size: 13px;
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .description {
+        margin: 0 auto 30px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-car {
+        width: 100%;
+    }
+    .features {
+        flex-direction: column;
+    }
+}
