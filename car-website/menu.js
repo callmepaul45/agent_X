@@ -1,11 +1,21 @@
-const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('navMenu');
+// const hamburger = document.getElementById('hamburger');
+//     const navMenu = document.getElementById('navMenu');
 
-    // Toggle mobile menu state
+//     // Toggle mobile menu state
+//     hamburger.addEventListener('click', () => {
+//         hamburger.classList.toggle('active');
+//         navMenu.classList.toggle('active');
+//     });
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+
+// Toggle mobile menu state
+if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
     });
+}
 
     // Close mobile menu when a nav link is clicked
     document.querySelectorAll('.nav-item a').forEach(link => {

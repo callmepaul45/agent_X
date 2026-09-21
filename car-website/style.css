@@ -194,6 +194,9 @@ header {
     display: flex;
     justify-content: center;
 }
+.hero-car-image{
+border-radius: 50px;
+}
 
 .hero-car img {
     width: 100%;
