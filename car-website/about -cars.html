@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurex Cars | Luxury Automotive</title>
+<style>
+/* ===== RESET & BASE STYLES ===== */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+background-color: #0a0a0a;
+color: #e0e0e0;
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+background: rgba(10, 10, 10, 0.95);
+backdrop-filter: blur(10px);
+padding: 1.2rem 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 1000;
+border-bottom: 1px solid #222;
+}
+
+.logo {
+font-size: 1.8rem;
+font-weight: 700;
+color: #d4af37;
+letter-spacing: 3px;
+text-transform: uppercase;
+}
+
+.nav-links {
+display: flex;
+gap: 2.5rem;
+list-style: none;
+}
+
+.nav-links a {
+color: #ccc;
+text-decoration: none;
+font-size: 0.95rem;
+letter-spacing: 1px;
+transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+color: #d4af37;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+height: 100vh;
+background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 0 5%;
+}
+
+.hero h1 {
+font-size: 4.5rem;
+font-weight: 300;
+letter-spacing: 8px;
+margin-bottom: 1rem;
+color: #fff;
+}
+
+.hero h1 span {
+color: #d4af37;
+font-weight: 600;
+}
+
+.hero p {
+font-size: 1.3rem;
+color: #aaa;
+max-width: 600px;
+margin-bottom: 2.5rem;
+}
+
+.btn {
+display: inline-block;
+padding: 1rem 2.5rem;
+background: transparent;
+border: 2px solid #d4af37;
+color: #d4af37;
+text-decoration: none;
+font-size: 1rem;
+letter-spacing: 2px;
+text-transform: uppercase;
+transition: all 0.4s ease;
+}
+
+.btn:hover {
+background: #d4af37;
+color: #0a0a0a;
+}
+
+/* ===== FEATURED CARS ===== */
+.section {
+padding: 6rem 5%;
+max-width: 1400px;
+margin: 0 auto;
+}
+
+.section-title {
+text-align: center;
+font-size: 2.5rem;
+font-weight: 300;
+letter-spacing: 4px;
+margin-bottom: 3rem;
+color: #fff;
+}
+
+.section-title span {
+color: #d4af37;
+}
+
+.cars-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 2rem;
+}
+
+.car-card {
+background: #111;
+border: 1px solid #222;
+border-radius: 8px;
+overflow: hidden;
+transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.car-card:hover {
+transform: translateY(-10px);
+border-color: #d4af37;
+}
+
+.car-img {
+width: 100%;
+height: 220px;
+object-fit: cover;
+display: block;
+}
+
+.car-info {
+padding: 1.5rem;
+}
+
+.car-info h3 {
+font-size: 1.4rem;
+margin-bottom: 0.5rem;
+color: #fff;
+}
+
+.car-info p {
+color: #888;
+font-size: 0.95rem;
+margin-bottom: 1rem;
+}
+
+.price {
+color: #d4af37;
+font-size: 1.2rem;
+font-weight: 600;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+background: #0f0f0f;
+text-align: center;
+}
+
+.about p {
+max-width: 700px;
+margin: 0 auto 2rem;
+color: #aaa;
+font-size: 1.1rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+background: #080808;
+text-align: center;
+padding: 2.5rem 5%;
+border-top: 1px solid #1a1a1a;
+color: #666;
+font-size: 0.9rem;
+}
+
+footer span {
+color: #d4af37;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+.hero h1 {
+font-size: 2.8rem;
+letter-spacing: 4px;
+}
+
+.nav-links {
+gap: 1.2rem;
+}
+
+.nav-links a {
+font-size: 0.85rem;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+<div class="logo">AUREX</div>
+<ul class="nav-links">
+<!-- <li><a href="#home">Home</a></li> -->
+<!-- <li><a href="#cars">Collection</a></li> -->
+<li><a href="#about">About</a></li>
+<!-- <li><a href="#contact">Contact</a></li> -->
+</ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+<h1>AUREX <span>CARS</span></h1>
+<p>Experience pure automotive excellence. Precision. Power. Prestige.</p>
+<a href="#cars" class="btn">Explore Collection</a>
+</section>
+
+<!-- FEATURED CARS -->
+<section class="section" id="cars">
+<h2 class="section-title">Featured <span>Collection</span></h2>
+<div class="cars-grid">
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Luxury Sedan" class="car-img">
+<div class="car-info">
+<h3>Aurex Phantom GT</h3>
+<p>Handcrafted luxury sedan with a twin-turbo V8 and adaptive suspension.</p>
+<div class="price">$189,000</div>
+</div>
+</div>
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=800&q=80" alt="Sports Coupe" class="car-img">
+<div class="car-info">
+<h3>Aurex Velocity S</h3>
+<p>Pure performance coupe. 0-60 in 2.9 seconds. Track-bred DNA.</p>
+<div class="price">$245,000</div>
+</div>
+</div>
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="Electric SUV" class="car-img">
+<div class="car-info">
+<h3>Aurex Horizon EV</h3>
+<p>All-electric luxury SUV. 450 miles range. Whisper-quiet power.</p>
+<div class="price">$112,000</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="section about" id="about">
+<h2 class="section-title">About <span>Aurex</span></h2>
+<p>
+Founded on the principle that a car should be more than transportation — 
+it should be a statement. Aurex Cars combines cutting-edge engineering 
+with timeless design to create vehicles that inspire.
+
+
+</p>
+<a href="#contact" class="btn">Get in Touch</a>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+<p>&copy; 2025 <span>Aurex Cars</span>. All rights reserved. | Luxury. Redefined.</p>
+</footer>
+
+</body>
+</html>
+
